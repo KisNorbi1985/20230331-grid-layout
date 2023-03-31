@@ -1,25 +1,28 @@
 * {
     margin: 0;
-    padding:0;
+    padding: 0;
     box-sizing: border-box;
     color: white;
 }
-div {
-    min-width: 100px;
-    height: 100px;
+div > div {
+    min-height: 100px;
+    border: 1px solid grey;
 }
 .header {
-    content: "HEADER";
     background-color: #0f1427;
+    min-height: 60px;
 }
 .menu {
     background-color: #ef3c4e;
+    min-height: 60px;
 }
 .hero {
     background-color: #4c86c6;
+    min-height: 150px;
 }
 .main {
     background-color: #24344b;
+    min-height: 150px;
 }
 .banner {
     background-color: #fbb466;
@@ -29,4 +32,39 @@ div {
 }
 .image {
     background-color: #c1e4e6;
+}
+@media screen and (min-width:768px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: 60px 2fr repeat(4,1fr);
+        grid-template-areas: 
+                         "header header header header"
+                         "hero hero hero hero"
+                         "menu main main main"
+                         "menu main main main"
+                         "menu banner banner banner"
+                         "menu extra extra image";
+    }
+    .header {
+        grid-area: header;
+    }
+    .menu {
+        grid-area: menu;
+    }
+    .hero {
+        grid-area: hero;
+    }
+    .main {
+        grid-area: main;
+    }
+    .banner {
+        grid-area: banner;
+    }
+    .extra {
+        grid-area: extra;
+    }
+    .image {
+        grid-area: image;
+    }
 }
