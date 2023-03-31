@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    color: white;
+}
+div {
+    min-width: 100px;
+    height: 100px;
+}
+.header {
+    content: "HEADER";
+    background-color: #0f1427;
+}
+.menu {
+    background-color: #ef3c4e;
+}
+.hero {
+    background-color: #4c86c6;
+}
+.main {
+    background-color: #24344b;
+}
+.banner {
+    background-color: #fbb466;
+}
+.extra {
+    background-color: #4dbd97;
+}
+.image {
+    background-color: #c1e4e6;
+}
